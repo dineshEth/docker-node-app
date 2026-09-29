@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#004B23" />
+  <title>DockerGuide — Learn Docker Simply</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-[#264653] transition-colors duration-300 dark:bg-[#071B1B] dark:text-[#AEF6C7]">
+
+  <!-- Navbar -->
+
+  <header class="sticky top-0 z-50 border-b border-[#264653]/10 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-[#071B1B]/90">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <a href="#" class="flex items-center gap-2 text-xl font-bold tracking-tight text-[#004B23] dark:text-[#AEF6C7]">
+        <span class="text-2xl">🐳</span>
+        Docker<span class="text-[#70C900]">Guide</span>
+      </a>
+
+```
+  <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+    <a href="#home" class="hover:text-[#70C900]">Home</a>
+    <a href="#start" class="hover:text-[#70C900]">Getting Started</a>
+    <a href="#commands" class="hover:text-[#70C900]">Commands</a>
+    <a href="#about" class="hover:text-[#70C900]">About</a>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <button id="themeToggle" aria-label="Toggle dark mode"
+      class="rounded-full border border-[#264653]/20 p-2 transition hover:bg-[#AEF6C7]/40 dark:border-white/20 dark:hover:bg-white/10">
+      <span id="themeIcon">🌙</span>
+    </button>
+
+    <a href="#start"
+      class="rounded-full bg-[#ABFF4F] px-5 py-2.5 text-sm font-semibold text-[#004B23] transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#ABFF4F]/20">
+      Learn Docker →
+    </a>
+  </div>
+</nav>
+```
+
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
+      <div>
+        <span class="inline-flex rounded-full border border-[#70C900]/20 bg-[#AEF6C7]/40 px-4 py-2 text-xs font-semibold tracking-wide text-[#004B23] dark:bg-[#ABFF4F]/10 dark:text-[#ABFF4F]">
+          CONTAINERIZE · BUILD · DEPLOY
+        </span>
+
+```
+    <h1 class="mt-7 text-5xl font-bold leading-[1.1] tracking-tight text-[#142C2C] md:text-7xl dark:text-white">
+      Docker made
+      <span class="text-[#70C900]">simple.</span>
+    </h1>
+
+    <p class="mt-6 max-w-lg text-lg leading-8 text-[#264653]/80 dark:text-[#AEF6C7]/70">
+      Learn how to build, package, and run applications
+      in containers. Start small, learn by doing, and ship
+      with confidence.
+    </p>
+
+    <div class="mt-9 flex flex-wrap gap-4">
+      <a href="#start"
+        class="rounded-xl bg-[#ABFF4F] px-6 py-3.5 font-semibold text-[#004B23] transition hover:-translate-y-1 hover:shadow-xl hover:shadow-[#ABFF4F]/20">
+        Get Started <span class="ml-2">→</span>
+      </a>
+
+      <a href="#commands"
+        class="rounded-xl border border-[#264653]/25 px-6 py-3.5 font-semibold transition hover:bg-[#AEF6C7]/30 dark:border-white/20 dark:hover:bg-white/5">
+        Explore Commands
+      </a>
+    </div>
+
+    <div class="mt-10 flex items-center gap-3 text-sm text-[#264653]/70 dark:text-[#AEF6C7]/60">
+      <span class="flex -space-x-2">
+        <span class="grid size-8 place-items-center rounded-full border-2 border-white bg-[#AEF6C7] dark:border-[#071B1B]">⌘</span>
+        <span class="grid size-8 place-items-center rounded-full border-2 border-white bg-[#ABFF4F] dark:border-[#071B1B]">⌁</span>
+      </span>
+      Practical guides. Real commands. No fluff.
+    </div>
+  </div>
+
+  <!-- Terminal illustration -->
+  <div class="relative">
+    <div class="absolute -inset-5 rounded-[2rem] bg-[#ABFF4F]/20 blur-3xl"></div>
+
+    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0C2426] shadow-2xl shadow-[#004B23]/20">
+      <div class="flex items-center justify-between border-b border-white/10 px-5 py-4">
+        <div class="flex gap-2">
+          <span class="size-3 rounded-full bg-[#FF6B6B]"></span>
+          <span class="size-3 rounded-full bg-[#FFD166]"></span>
+          <span class="size-3 rounded-full bg-[#ABFF4F]"></span>
+        </div>
+        <span class="text-xs text-white/50">docker — terminal</span>
+        <span class="text-xs text-[#ABFF4F]">● online</span>
+      </div>
+
+      <div class="space-y-5 p-6 font-mono text-sm leading-7 sm:p-9">
+        <p class="text-white/50"># Your first container</p>
+        <p><span class="text-[#ABFF4F]">$</span> <span class="text-white">docker run hello-world</span></p>
+        <p class="text-[#AEF6C7]">Hello from Docker!</p>
+        <p class="text-white/60">This message shows that your installation appears to be working correctly.</p>
+        <p class="text-white/50"># See running containers</p>
+        <p><span class="text-[#ABFF4F]">$</span> <span class="text-white">docker ps</span></p>
+        <div class="rounded-lg border border-[#ABFF4F]/20 bg-[#ABFF4F]/5 p-4 text-xs text-[#AEF6C7]">
+          ✓ Container workflow ready<br />
+          ✓ Image pulled successfully<br />
+          ✓ You're ready to build
+        </div>
+        <p class="animate-pulse text-[#ABFF4F]">▋</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feature cards -->
+<section id="about" class="mx-auto max-w-7xl px-6 pb-20">
+  <div class="mb-8">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#70C900]">The fundamentals</p>
+    <h2 class="mt-3 text-3xl font-bold tracking-tight text-[#142C2C] dark:text-white">Everything starts here.</h2>
+    <p class="mt-3 text-[#264653]/70 dark:text-[#AEF6C7]/60">Four building blocks for your container journey.</p>
+  </div>
+
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <a href="#start" class="group rounded-2xl border border-[#264653]/10 bg-[#F7FBF8] p-6 transition hover:-translate-y-1 hover:border-[#70C900]/50 hover:shadow-xl hover:shadow-[#004B23]/5 dark:border-white/10 dark:bg-white/[0.03]">
+      <div class="mb-5 grid size-12 place-items-center rounded-xl bg-[#AEF6C7] text-xl text-[#004B23]">⚒</div>
+      <h3 class="text-lg font-bold text-[#142C2C] dark:text-white">Build</h3>
+      <p class="mt-2 text-sm leading-6 text-[#264653]/70 dark:text-[#AEF6C7]/60">Package your application into a portable Docker image.</p>
+      <span class="mt-5 inline-block text-sm font-semibold text-[#438500] dark:text-[#ABFF4F]">Explore →</span>
+    </a>
+
+    <a href="#commands" class="group rounded-2xl border border-[#264653]/10 bg-[#F7FBF8] p-6 transition hover:-translate-y-1 hover:border-[#70C900]/50 hover:shadow-xl hover:shadow-[#004B23]/5 dark:border-white/10 dark:bg-white/[0.03]">
+      <div class="mb-5 grid size-12 place-items-center rounded-xl bg-[#AEF6C7] text-xl text-[#004B23]">◈</div>
+      <h3 class="text-lg font-bold text-[#142C2C] dark:text-white">Run</h3>
+      <p class="mt-2 text-sm leading-6 text-[#264653]/70 dark:text-[#AEF6C7]/60">Run isolated containers with a single command.</p>
+      <span class="mt-5 inline-block text-sm font-semibold text-[#438500] dark:text-[#ABFF4F]">Explore →</span>
+    </a>
+
+    <a href="#commands" class="group rounded-2xl border border-[#264653]/10 bg-[#F7FBF8] p-6 transition hover:-translate-y-1 hover:border-[#70C900]/50 hover:shadow-xl hover:shadow-[#004B23]/5 dark:border-white/10 dark:bg-white/[0.03]">
+      <div class="mb-5 grid size-12 place-items-center rounded-xl bg-[#AEF6C7] text-xl text-[#004B23]">▤</div>
+      <h3 class="text-lg font-bold text-[#142C2C] dark:text-white">Manage</h3>
+      <p class="mt-2 text-sm leading-6 text-[#264653]/70 dark:text-[#AEF6C7]/60">Inspect, stop, and organize your containers.</p>
+      <span class="mt-5 inline-block text-sm font-semibold text-[#438500] dark:text-[#ABFF4F]">Explore →</span>
+    </a>
+
+    <a href="#start" class="group rounded-2xl border border-[#264653]/10 bg-[#F7FBF8] p-6 transition hover:-translate-y-1 hover:border-[#70C900]/50 hover:shadow-xl hover:shadow-[#004B23]/5 dark:border-white/10 dark:bg-white/[0.03]">
+      <div class="mb-5 grid size-12 place-items-center rounded-xl bg-[#AEF6C7] text-xl text-[#004B23]">↗</div>
+      <h3 class="text-lg font-bold text-[#142C2C] dark:text-white">Deploy</h3>
+      <p class="mt-2 text-sm leading-6 text-[#264653]/70 dark:text-[#AEF6C7]/60">Move containerized apps between environments.</p>
+      <span class="mt-5 inline-block text-sm font-semibold text-[#438500] dark:text-[#ABFF4F]">Explore →</span>
+    </a>
+  </div>
+</section>
+
+<!-- Quick start -->
+<section id="start" class="border-y border-[#264653]/10 bg-[#F7FBF8] py-20 dark:border-white/10 dark:bg-white/[0.02]">
+  <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#70C900]">Quick start</p>
+      <h2 class="mt-3 text-3xl font-bold tracking-tight text-[#142C2C] md:text-4xl dark:text-white">Your first container.<br />Two commands away.</h2>
+      <p class="mt-5 leading-7 text-[#264653]/70 dark:text-[#AEF6C7]/60">Once Docker is installed and running, open your terminal and try this.</p>
+      <a href="https://docs.docker.com/get-started/" target="_blank" rel="noreferrer" class="mt-7 inline-flex items-center gap-2 font-semibold text-[#438500] hover:underline dark:text-[#ABFF4F]">Read the official guide ↗</a>
+    </div>
+
+    <div id="commands" class="overflow-hidden rounded-2xl bg-[#0C2426] shadow-xl">
+      <div class="flex items-center justify-between border-b border-white/10 px-5 py-4">
+        <span class="text-sm text-white/60">Terminal</span>
+        <button id="copyButton" class="rounded-lg border border-white/15 px-3 py-1.5 text-xs text-white transition hover:bg-white/10">Copy commands</button>
+      </div>
+      <pre class="overflow-x-auto p-6 font-mono text-sm leading-8"><code id="commandsText"><span class="text-white/40"># 1. Download a test image</span>
+```
+
+<span class="text-[#ABFF4F]">$</span> <span class="text-white">docker pull hello-world</span>
+
+<span class="text-white/40"># 2. Run your first container</span> <span class="text-[#ABFF4F]">$</span> <span class="text-white">docker run hello-world</span>
+
+<span class="text-white/40"># 3. List containers</span> <span class="text-[#ABFF4F]">$</span> <span class="text-white">docker ps -a</span></code></pre> </div> </div> </section>
+
+```
+<!-- Learning path -->
+<section class="mx-auto max-w-7xl px-6 py-20">
+  <div class="mb-12 text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#70C900]">Your learning path</p>
+    <h2 class="mt-3 text-3xl font-bold tracking-tight text-[#142C2C] md:text-4xl dark:text-white">From zero to containerized.</h2>
+    <p class="mt-4 text-[#264653]/70 dark:text-[#AEF6C7]/60">Follow these steps at your own pace.</p>
+  </div>
+
+  <div class="grid gap-8 md:grid-cols-4">
+    <div>
+      <span class="grid size-10 place-items-center rounded-full bg-[#ABFF4F] font-bold text-[#004B23]">01</span>
+      <h3 class="mt-5 font-bold text-[#142C2C] dark:text-white">Install Docker</h3>
+      <p class="mt-2 text-sm leading-6 text-[#264653]/70 dark:text-[#AEF6C7]/60">Set up Docker Desktop or Docker Engine.</p>
+    </div>
+    <div>
+      <span class="grid size-10 place-items-center rounded-full bg-[#ABFF4F] font-bold text-[#004B23]">02</span>
+      <h3 class="mt-5 font-bold text-[#142C2C] dark:text-white">Write a Dockerfile</h3>
+      <p class="mt-2 text-sm leading-6 text-[#264653]/70 dark:text-[#AEF6C7]/60">Describe how to package your application.</p>
+    </div>
+    <div>
+      <span class="grid size-10 place-items-center rounded-full bg-[#ABFF4F] font-bold text-[#004B23]">03</span>
+      <h3 class="mt-5 font-bold text-[#142C2C] dark:text-white">Build an image</h3>
+      <p class="mt-2 text-sm leading-6 text-[#264653]/70 dark:text-[#AEF6C7]/60">Turn your Dockerfile into an image.</p>
+    </div>
+    <div>
+      <span class="grid size-10 place-items-center rounded-full bg-[#ABFF4F] font-bold text-[#004B23]">04</span>
+      <h3 class="mt-5 font-bold text-[#142C2C] dark:text-white">Run your app</h3>
+      <p class="mt-2 text-sm leading-6 text-[#264653]/70 dark:text-[#AEF6C7]/60">Start a container and access your app.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="mx-auto max-w-7xl px-6 pb-20">
+  <div class="flex flex-col items-start justify-between gap-6 rounded-3xl bg-gradient-to-r from-[#ABFF4F] to-[#AEF6C7] p-8 sm:flex-row sm:items-center sm:p-12">
+    <div>
+      <p class="text-sm font-bold uppercase tracking-widest text-[#004B23]/70">Keep learning</p>
+      <h2 class="mt-2 text-3xl font-bold tracking-tight text-[#004B23]">Ready to dive deeper?</h2>
+      <p class="mt-3 max-w-xl text-[#004B23]/75">Explore practical examples, common commands, and the official Docker documentation.</p>
+    </div>
+    <a href="https://docs.docker.com/" target="_blank" rel="noreferrer" class="shrink-0 rounded-xl bg-[#004B23] px-6 py-3.5 font-semibold text-white transition hover:bg-[#264653]">Explore Docker docs ↗</a>
+  </div>
+</section>
+```
+
+  </main>
+
+  <!-- Footer -->
+
+  <footer class="border-t border-[#264653]/10 dark:border-white/10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-7 text-sm sm:flex-row">
+      <a href="#" class="font-bold text-[#004B23] dark:text-[#AEF6C7]">🐳 DockerGuide</a>
+      <p class="text-[#264653]/60 dark:text-[#AEF6C7]/50">Learn once. Run anywhere.</p>
+      <p class="text-[#264653]/50 dark:text-[#AEF6C7]/40">Built for curious developers.</p>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    // Respect the system theme on first visit.
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    function setTheme(dark) {
+      root.classList.toggle("dark", dark);
+      themeIcon.textContent = dark ? "☀️" : "🌙";
+      localStorage.setItem("theme", dark ? "dark" : "light");
+    }
+
+    setTheme(savedTheme ? savedTheme === "dark" : prefersDark);
+
+    themeToggle.addEventListener("click", () => {
+      setTheme(!root.classList.contains("dark"));
+    });
+
+    // Copy the commands without the decorative terminal prompt.
+    document.getElementById("copyButton").addEventListener("click", async () => {
+      const commands = [
+        "docker pull hello-world",
+        "docker run hello-world",
+        "docker ps -a"
+      ].join("\n");
+
+      const button = document.getElementById("copyButton");
+
+      try {
+        await navigator.clipboard.writeText(commands);
+        button.textContent = "Copied!";
+        setTimeout(() => button.textContent = "Copy commands", 1500);
+      } catch {
+        button.textContent = "Copy unavailable";
+      }
+    });
+  </script>
+
+</body>
+</html>
