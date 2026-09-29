@@ -15,6 +15,16 @@ app.get("/", (_, res) => {
     res.sendFile(path.join(__dirname, "public", "home.html"))
 });
 
+app.get("/health", (_, res) => {
+    res.status(200).json({
+        status: "ok",
+        statusCode: 200,
+        message: "Service is healthy",
+        service: "docker-guide",
+        uptime: process.uptime(),
+        timestamp: new Date().toISOString(),
+    });
+});
 
 app.listen(PORT, HOST, () => {
     console.log(`http://${HOST}:${PORT}`)
