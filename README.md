@@ -2,6 +2,8 @@
 
 A simple Node.js application built with Express.js, containerized with Docker. This project demonstrates Dockerizing a Node.js web application with development and production configurations.
 
+![Diagram](public/diagram.png)
+
 ## Prerequisites
 
 - Node.js 18+ (for local development)
